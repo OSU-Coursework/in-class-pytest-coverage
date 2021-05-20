@@ -21,6 +21,11 @@ class LeapYearUnitTests(unittest.TestCase):
         self.assertEqual(leap_year(1945), False)
         self.assertEqual(leap_year(1623), False)
 
+    def test_invalid_input(self):
+        with self.assertRaises(ValueError):
+            leap_year(-1)
+            leap_year(-4560465)
+
 
 if __name__ == '__main__':
     unittest.main()
